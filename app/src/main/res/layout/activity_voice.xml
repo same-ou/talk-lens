@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VoiceActivity"
+    android:paddingVertical="@dimen/_8sdp"
+    android:background="@color/dark_text">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_back" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dotted_border"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="English"
+                android:textAlignment="center"
+                android:id="@+id/sourceLang"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14ssp"
+                android:layout_marginRight="@dimen/_14ssp"
+                android:src="@drawable/ic_swap" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dotted_border"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="Vietnamese"
+                android:textAlignment="center"
+                android:id="@+id/targetLang"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/etVoice"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_200sdp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:gravity="top"
+        android:maxLines="10"
+        android:hint="Start speaking..."
+        android:padding="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:layout_margin="@dimen/_16sdp"/>
+
+    <TextView
+        android:id="@+id/tvVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@+id/micButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etVoice" />
+
+    <View
+        android:id="@+id/viewCircle"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="@+id/micButton"
+        app:layout_constraintEnd_toEndOf="@+id/micButton"
+        app:layout_constraintStart_toStartOf="@+id/micButton"
+        app:layout_constraintTop_toTopOf="@+id/micButton"
+        android:visibility="invisible"
+        />
+
+    <ImageButton
+            android:id="@+id/micButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dotted_border"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:src="@drawable/ic_voice_recorder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/voice_recorder_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

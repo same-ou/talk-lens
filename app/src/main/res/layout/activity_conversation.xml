@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConversationActivity"
+    android:padding="@dimen/_8sdp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_back" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dotted_border"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="English"
+                android:textAlignment="center"
+                android:id="@+id/sourceLang"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14ssp"
+                android:layout_marginRight="@dimen/_14ssp"
+                android:src="@drawable/ic_swap" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dotted_border"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="Vietnamese"
+                android:textAlignment="center"
+                android:id="@+id/targetLang"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvConversation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUser1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <ImageButton
+        android:id="@+id/btnUser1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@drawable/dotted_border"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_karaoke"
+        app:layout_constraintBottom_toTopOf="@id/tvSrcLang"
+        app:layout_constraintEnd_toEndOf="@+id/tvSrcLang"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tvSrcLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/btnUser2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@drawable/dotted_border"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_karaoke2"
+        app:layout_constraintBottom_toTopOf="@id/tvTargetLang"
+        app:layout_constraintEnd_toEndOf="@+id/tvTargetLang"
+        app:layout_constraintStart_toStartOf="@+id/tvTargetLang" />
+    <TextView
+        android:id="@+id/tvTargetLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
